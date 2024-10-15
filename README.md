@@ -1,5 +1,8 @@
 # Augmenting Paths
 
+“I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.”
+ChatGPT was used to debug the portion of code which was pushing path onto the stack if a neighbor node hadnt been visited. I seemed to have the right idea but JavaScript didn't like the exact method I was using.
+
 When we talked about the Ford-Fulkerson algorithm to find the maximum flow
 through a graph, I mentioned the "find an augmenting path" function. You're
 going to implement this function. Start with the template I provided in
@@ -32,3 +35,5 @@ accordingly.
 
 What is the worst-case big $\Theta$ complexity of your implementation? Add your
 answer, including your reasoning, to this markdown file.
+
+Each vertex can only be visited once as it checks. At each vertex, every edge is checked as well. So, in worst case, every vertex and every edge is being checked/visited before finding an augmented path. This would make the complexity T(n) ∈ Θ(V + E).
